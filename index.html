@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA API Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NASA's Astronomy Picture of the Day</h1>
+            <p>Discover the beauty of the cosmos through NASA's eyes.</p>
+        </header>
+        <main>
+            <button id="fetchData">Show Today's Picture</button>
+            <div id="image-container">
+                <div id="loading">Loading...</div>
+            </div>
+            <p id="description"></p>
+        </main>
+        <footer>
+            <p>Data courtesy of NASA's API. <a href="https://api.nasa.gov/" target="_blank">Learn more</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
