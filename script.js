@@ -49,13 +49,13 @@ document.getElementById('fetchData').addEventListener('click', function() {
         peopleDiv.appendChild(h2);
         data.people.forEach(person => {
             const p = document.createElement("p");
-            p.textContent = `${person.name} (${person.craft})`;
+            p.textContent = `${person.name} (${person.spacecraft})`;
             peopleDiv.appendChild(p);
         });
         // create delete button to clear the info
         const deleteInfo = document.createElement("button");
         deleteInfo.textContent = "Delete";
-        deleteInfo.classList.add("Clear");
+        deleteInfo.classList.add("clear");
         peopleDiv.appendChild(deleteInfo);
         deleteInfo.addEventListener("click",function(){
             peopleDiv.innerHTML = "";
