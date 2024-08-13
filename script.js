@@ -1,7 +1,4 @@
-//allow http
-if (location.protocol == "https:") {
-    location.protocol = "http:";
-}
+
 function showPicture(){
     const imageContainer = document.getElementById('image-container');
     const description = document.getElementById('description');
@@ -36,7 +33,8 @@ const peopleDiv = document.querySelector("#people");
 document.getElementById('fetchData').addEventListener('click', function() {
     // clear the previous data
     peopleDiv.innerHTML = "";
-    fetch('http://api.open-notify.org/astros.json')
+    
+    fetch('https://corquaid.github.io/international-space-station-APIs/JSON/people-in-space.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('response error');  
@@ -57,7 +55,7 @@ document.getElementById('fetchData').addEventListener('click', function() {
         // create delete button to clear the info
         const deleteInfo = document.createElement("button");
         deleteInfo.textContent = "Delete";
-        deleteInfo.classList.add("delete");
+        deleteInfo.classList.add("Clear");
         peopleDiv.appendChild(deleteInfo);
         deleteInfo.addEventListener("click",function(){
             peopleDiv.innerHTML = "";
