@@ -1,3 +1,7 @@
+//allow http
+if (location.protocol == "https:") {
+    location.protocol = "http:";
+}
 function showPicture(){
     const imageContainer = document.getElementById('image-container');
     const description = document.getElementById('description');
